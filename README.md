@@ -40,8 +40,8 @@ A modern, mobile-first application for managing your university schedule, tasks,
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/university-timetable.git
-cd university-timetable/frontend
+git clone https://github.com/pavan-progamming/Time-Table-App.git
+cd Time-Table-Appt/frontend
 
 # Install dependencies
 npm install
@@ -122,6 +122,6 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## 📧 Contact
 
-Your Name - [@yourtwitter](https://twitter.com/yourtwitter) - your.email@example.com
+pavan kumar -  pavankumarrallapati9182@gmail.com
 
-Project Link: [https://github.com/yourusername/university-timetable](https://github.com/yourusername/university-timetable)
+Project Link: https://github.com/pavan-progamming/Time-Table-App.git
