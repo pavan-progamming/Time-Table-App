@@ -1,4 +1,4 @@
-# 🎓 University Timetable Manager
+# 🎓  Timetable app
 
 A modern, mobile-first application for managing your university schedule, tasks, and deadlines. Built with React and Capacitor for a seamless cross-platform experience.
 
