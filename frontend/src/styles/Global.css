@@ -1,0 +1,197 @@
+/* Global Styles */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --primary: #6366f1;
+  --primary-dark: #4f46e5;
+  --bg-main: #f1f5f9;
+  --bg-card: rgba(255, 255, 255, 0.8);
+  --text-main: #0f172a;
+  --text-muted: #64748b;
+  --border: rgba(226, 232, 240, 0.8);
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.3);
+  --radius-lg: 20px;
+  --radius-md: 12px;
+}
+
+[data-theme='dark'] {
+  --bg-main: #020617;
+  --bg-card: rgba(30, 41, 59, 0.7);
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --border: rgba(51, 65, 85, 0.5);
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.3);
+  --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.3);
+  --shadow-lg: 0 20px 25px -5px rgb(0 0 0 / 0.5);
+  --glass-bg: rgba(15, 23, 42, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  min-height: 100dvh;
+  overflow-x: hidden;
+}
+
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+}
+
+.card {
+  background: var(--bg-card);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  color: white;
+  border-radius: var(--radius-md);
+  padding: 12px 24px;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --radius-lg: 14px;
+  }
+
+  body {
+    font-size: 13px !important;
+  }
+
+  .card {
+    padding: 12px !important;
+    border-radius: var(--radius-lg) !important;
+  }
+
+  h1 {
+    font-size: 18px !important;
+  }
+
+  h2 {
+    font-size: 22px !important;
+  }
+
+  h3 {
+    font-size: 16px !important;
+  }
+
+  .btn-primary {
+    padding: 8px 16px !important;
+    font-size: 13px !important;
+    border-radius: 10px !important;
+  }
+
+  input,
+  select,
+  textarea {
+    padding: 10px !important;
+    font-size: 13px !important;
+  }
+}
+
+.btn-primary:active {
+  transform: scale(0.95);
+}
+
+input,
+select,
+textarea {
+  background: var(--bg-main);
+  color: var(--text-main);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 12px;
+  width: 100%;
+  outline: none;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
+  background: var(--bg-card);
+}
+
+/* Landscape Mode Optimizations */
+@media (max-height: 500px) and (orientation: landscape) {
+  :root {
+    --radius-lg: 10px;
+  }
+
+  body {
+    font-size: 12px !important;
+  }
+
+  .card {
+    padding: 10px !important;
+  }
+
+  h1 {
+    font-size: 16px !important;
+  }
+
+  h2 {
+    font-size: 20px !important;
+  }
+
+  h3 {
+    font-size: 15px !important;
+  }
+
+  header {
+    height: 50px !important;
+  }
+
+  main {
+    padding: 10px !important;
+  }
+}
+
+/* Hide scrollbar for mobile */
+@media (max-width: 1024px) {
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  * {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+}
