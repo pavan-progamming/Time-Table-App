@@ -41,7 +41,7 @@ A modern, mobile-first application for managing your university schedule, tasks,
 ```bash
 # Clone the repository
 git clone https://github.com/pavan-progamming/Time-Table-App.git
-cd Time-Table-Appt/frontend
+cd Time-Table-App/frontend
 
 # Install dependencies
 npm install
